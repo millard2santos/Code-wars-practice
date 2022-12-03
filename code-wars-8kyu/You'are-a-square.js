@@ -1,11 +1,12 @@
-const collect = require('collect.js');
+const flip=(d, a)=>{
+  
+    if (d === 'R'){
+       a = a.sort((e,f)=>e-f )
+    }
+    else {
+      a = a.sort((e,f)=> f-e)
+    }
+    return a
+  }
 
-
-const myArray = collect({
-    name: 'Millard',
-    number: 123456,
-    city: 'Madrid'
-})
-const X = myArray.flip()
-
-console.log(X.all())
+console.log(flip(d,a))
